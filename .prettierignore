@@ -1,0 +1,8 @@
+*.min.*
+*@*
+*jquery*
+.next
+out
+*keybase*
+LICENSE
+CNAME
