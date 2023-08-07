@@ -12,7 +12,7 @@ export default function Footer() {
 					<FontAwesomeIcon icon={faDiscord} size="xl" />
 				</Link>
 				<Link
-					href="https://github.com/akpi816218/discog"
+					href="https://github.com/akpi816218"
 					className="has-text-white ml-2"
 					target="_blank"
 				>
@@ -25,7 +25,7 @@ export default function Footer() {
 				<span className="has-text-weight-bold">akpi816218</span>
 				<br />
 				&copy; <span id="cp-year">2023</span> Copyright{' '}
-				<Link href="https://github.com/akpi816218">akpi816218</Link>. All Rights
+				<Link href="https://akpi.is-a.dev">akpi816218</Link>. All Rights
 				Reserved.
 			</p>
 			<Link

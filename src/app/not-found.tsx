@@ -7,12 +7,10 @@ import {
 	IconDefinition
 } from '@fortawesome/fontawesome-svg-core';
 import {
-	faArrowUp,
 	faServer,
 	faTerminal
 } from '@fortawesome/fontawesome-free-solid';
 import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
 config.autoAddCss = false;

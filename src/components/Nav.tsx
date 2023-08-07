@@ -53,7 +53,7 @@ export default function Nav() {
 					</Link>
 
 					<Link
-						href="https://github.com/akpi816218/discog"
+						href="https://github.com/akpi816218"
 						className="navbar-item is-tab"
 						target="_blank"
 						prefetch={true}
