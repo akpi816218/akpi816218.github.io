@@ -1,0 +1,469 @@
+:root {
+	--c1: #ce481c;
+	--c2: #dfb4ae;
+	--c3: #7a0b3c;
+	--c4: #291241;
+	--c5: #080f37;
+	--blurple: #5865f2;
+	--dark-blurple: #454fbf;
+	--bg: var(--c5);
+	--line-bg: var(--c2);
+}
+
+* {
+	font-family: inherit;
+}
+
+html {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	font-size: 1.0625rem;
+}
+
+body {
+	overflow-x: hidden;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+}
+
+section p {
+	width: 90vw;
+	max-width: fit-content;
+	margin: 2rem auto;
+	word-wrap: normal;
+	overflow-wrap: break-word;
+}
+
+section {
+	max-width: 100vw;
+	padding-bottom: 3rem;
+}
+
+section.last {
+	padding: 10vh 0;
+}
+
+.hero-body {
+	padding-bottom: 10vh;
+}
+
+.column.skill {
+	padding: 1rem;
+	margin: 0.5rem;
+	border-radius: 10px;
+	border: solid 2px var(--c1);
+}
+
+.button-row {
+	justify-content: center;
+	margin: auto;
+	padding-top: 2rem;
+}
+
+.mono {
+	font-family: 'Ubuntu Mono', 'Source Code Pro', 'Roboto Mono', monospace;
+}
+
+.blurple {
+	color: var(--blurple);
+}
+
+.dark-blurple {
+	color: var(--dark-blurple);
+}
+
+.bg-base {
+	background-color: var(--bg) !important;
+}
+
+.bg-3 {
+	background-color: var(--c3) !important;
+	color: var(--c2);
+}
+
+.bg-4 {
+	background-color: var(--c4) !important;
+	color: var(--c2);
+}
+
+.bg-4 a,
+.bg-3 a {
+	color: var(--c1);
+}
+
+.is-c1 {
+	color: var(--c1);
+}
+
+.is-c2 {
+	color: var(--c2);
+}
+
+.is-c3 {
+	color: var(--c3);
+}
+
+#backtotop {
+	display: inline-block;
+	background-color: var(--blurple);
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 4px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	transition:
+		background-color 0.3s,
+		opacity 0.5s,
+		visibility 0.5s;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+}
+
+#backtotop:hover {
+	cursor: pointer;
+	background-color: #333;
+}
+
+#backtotop:active {
+	background-color: #555;
+}
+
+#backtotop.show {
+	opacity: 0.4;
+	visibility: visible;
+}
+
+.navbar-brand {
+	max-width: 100vw;
+}
+
+.navbar-item,
+.navbar-link {
+	-moz-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
+
+.navbar-item:hover {
+	background-color: transparent !important;
+	color: var(--blurple) !important;
+}
+
+.navbar-link:hover {
+	background-color: transparent !important;
+	color: var(--blurple) !important;
+}
+
+.navbar-menu {
+	animation: navAnimOpen 0.2s ease-in-out;
+}
+
+@keyframes navAnimOpen {
+	0% {
+		display: none;
+		opacity: 0;
+		max-height: 0;
+	}
+
+	1% {
+		display: block;
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+		max-height: 396px;
+	}
+
+	from {
+		opacity: 0;
+		transform: translateY(-5px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+nav,
+.navbar-menu {
+	background-color: var(--bg) !important;
+	font-size: 1.125em;
+}
+
+.navbar-item.nav-dark,
+.navbar-link.nav-dark {
+	color: #363636 !important;
+}
+
+.navbar-item,
+.navbar-link {
+	color: white !important;
+}
+
+nav.nav-w {
+	background: white !important;
+	box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.nav-w {
+	background: white !important;
+	box-shadow: 100px 2px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.mb-12 {
+	margin-bottom: 6rem;
+}
+
+.mt-12 {
+	margin-top: 6rem;
+}
+
+.ml-12 {
+	margin-left: 6rem;
+}
+
+.mr-12 {
+	margin-right: 6rem;
+}
+
+.mb-16 {
+	margin-bottom: 16rem;
+}
+
+.mt-16 {
+	margin-top: 16rem;
+}
+
+.ml-16 {
+	margin-left: 16rem;
+}
+
+.mr-16 {
+	margin-right: 16rem;
+}
+
+a .img-col-ml-13 {
+	margin-left: 13rem;
+}
+
+.img-col-mr-13 {
+	margin-right: 13rem;
+}
+
+.has-image-centered {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.line {
+	background: var(--line-bg);
+	display: block;
+	width: 11em;
+	height: 5px;
+}
+
+.line2 {
+	background: var(--line-bg);
+	display: block;
+	width: 7em;
+	height: 5px;
+}
+
+.line3 {
+	background: var(--line-bg);
+	display: block;
+	width: 425px;
+	height: 5px;
+}
+
+.line-center {
+	margin: 0 auto;
+}
+
+.line.blurple {
+	background: var(--blurple);
+}
+
+.line2.blurple {
+	background: var(--blurple);
+}
+
+.line3.blurple {
+	background: var(--blurple);
+}
+
+.line.dark-blurple {
+	background: var(--dark-blurple);
+}
+
+.line2.dark-blurple {
+	background: var(--dark-blurple);
+}
+
+.line3.dark-blurple {
+	background: var(--dark-blurple);
+}
+
+.title.lined {
+	margin-bottom: 0;
+}
+
+.vert-move {
+	-webkit-animation: mover 1s infinite alternate;
+	-moz-animation: mover 1s infinite alternate;
+	-ms-animation: mover 1s infinite alternate;
+	-o-animation: mover 1s infinite alternate;
+	animation: mover 1s infinite alternate;
+}
+
+.vert-move2 {
+	-webkit-animation: mover 0.5s infinite alternate;
+	-moz-animation: mover 0.5s infinite alternate;
+	-ms-animation: mover 0.5s infinite alternate;
+	-o-animation: mover 0.5s infinite alternate;
+	animation: mover 0.5s infinite alternate;
+}
+
+@-webkit-keyframes mover {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-1em);
+	}
+}
+
+@-moz-keyframes mover {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-1em);
+	}
+}
+
+@-ms-keyframes mover {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-1em);
+	}
+}
+
+@-o-keyframes mover {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-1em);
+	}
+}
+
+@keyframes mover {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-1em);
+	}
+}
+
+.down-button:hover,
+.up-button:hover {
+	animation: mover 0.25s infinite alternate;
+}
+
+a {
+	display: inline-block;
+}
+
+a:hover {
+	transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-ms-transform: scaleX(-1);
+}
+
+nav a:hover,
+.flip-v:hover {
+	transform: scaleY(-1);
+	-webkit-transform: scaleY(-1);
+	-moz-transform: scaleY(-1);
+	-o-transform: scaleY(-1);
+	-ms-transform: scaleY(-1);
+}
+
+footer a:hover {
+	transform: scaleY(-1);
+	-webkit-transform: scaleY(-1);
+	-moz-transform: scaleY(-1);
+	-o-transform: scaleY(-1);
+	-ms-transform: scaleY(-1);
+}
+
+.no-flip:hover {
+	transform: none !important;
+	-webkit-transform: none !important;
+	-moz-transform: none !important;
+	-o-transform: none !important;
+	-ms-transform: none !important;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+	text-decoration: none;
+	transform: scale(1.0625);
+	box-shadow: 0 0 2.5px 1px var(--c4);
+}
+
+.button.is-blurple {
+	background-color: var(--blurple);
+	border-color: transparent;
+	color: whitesmoke;
+}
+
+.button.is-dark-blurple {
+	background-color: var(--dark-blurple);
+	border-color: transparent;
+	color: white;
+}
+
+.button.is-c2 {
+	background-color: var(--c2);
+	border-color: transparent;
+	color: var(--c5);
+}
+
+.button.is-c3 {
+	background-color: var(--c3);
+	border-color: transparent;
+	color: whitesmoke;
+}
+
+.button.is-c4 {
+	background-color: var(--c4);
+	border-color: transparent;
+	color: whitesmoke;
+}
+
+.block {
+	display: block !important;
+}
