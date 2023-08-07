@@ -4,7 +4,6 @@ const nextConfig = {
 	distDir: 'out',
 	images: { unoptimized: true },
 	trailingSlash: true,
-	basePath: '/me'
 };
 
 export default nextConfig;
