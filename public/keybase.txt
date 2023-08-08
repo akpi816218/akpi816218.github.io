@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/akpi816218
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://akpi.is-a.dev
+  * I am akpi816218 (https://keybase.io/akpi816218) on keybase.
+  * I have a public key ASDXg5x0xEptfNSoP-WkqBxcta7cAKZVP9IUyHTahZD2XQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120e9e43df9de5e9d2d764e387020c4ad30f507de7a9667d98a0f1865e97fe2e7be0a",
+      "host": "keybase.io",
+      "kid": "0120d7839c74c44a6d7cd4a83fe5a4a81c5cb5aedc00a6553fd214c874da8590f65d0a",
+      "uid": "1b41d0e170dbd066d6e2438508182c19",
+      "username": "akpi816218"
+    },
+    "merkle_root": {
+      "ctime": 1691516524,
+      "hash": "b6a6c88e9e1ddf8ac0a484c3752c3c27d701a965711018cee69f801f95707772bba43c01d4fe5b16c6fb0316e8d97e0286130239796cfdd89ac979d88745cfeb",
+      "hash_meta": "8ff3df9f2c53ecb1f3b12d7a3f282511eaf13cb1a7881d87f77c73055ca422dc",
+      "seqno": 24784833
+    },
+    "service": {
+      "entropy": "xr/v7Yo4u8VQbMa6FvRylS0J",
+      "hostname": "akpi.is-a.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.2.1"
+  },
+  "ctime": 1691516574,
+  "expire_in": 504576000,
+  "prev": "1e48e6738ed463791ce1765083942e8e6f011a7f5339e10e7d74d2af22539f29",
+  "seqno": 22,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg14OcdMRKbXzUqD/lpKgcXLWu3ACmVT/SFMh02oWQ9l0Kp3BheWxvYWTESpcCFsQgHkjmc47UY3kc4XZQg5Qujm8BGn9TOeEOfXTSryJTnynEIApxi93w1TfLKLZqg7jWJhb3ojinB2cgxTkV4GBJXlFsAgHCo3NpZ8RAzRhKO6lh5GKnpezmkRvyo/XoPH0MMjvHxdZwexLvtuQHbH506lzZXSml0vBrAjV4F/EeDjLluagkkLcgjfd+B6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIE1bnMXoTKrenEndHcqpQo1ZKE1FVxUWr/IkiD1UZ6mco3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/akpi816218
+
+==================================================================
