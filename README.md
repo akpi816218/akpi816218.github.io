@@ -1,8 +1,6 @@
 # akpi816218
 
-My developer portfolio.
-
-Hosted with Vercel.
+My developer portfolio and personal website.
 
 ---
 
