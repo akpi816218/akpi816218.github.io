@@ -47,13 +47,13 @@ export const metadata: Metadata = {
 	keywords: [],
 	creator: 'Akhil Pillai',
 	generator: 'Next.js',
-	// icons: ['/logo.png'],
+	icons: ['/assets/img/akpi-logo.svg'],
 	description: "akpi's developer portfolio",
 	twitter: {
 		card: 'summary_large_image',
 		site: '@akpi',
 		creator: '@akpi816218',
-		// images: 'https://akpi.is-a.dev/logo.png',
+		images: 'https://akpi.is-a.dev/assets/img/akpi-logo.svg',
 		description: "akpi's developer portfolio"
 	},
 	openGraph: {
@@ -63,15 +63,13 @@ export const metadata: Metadata = {
 		siteName: 'akpi',
 		countryName: 'United States',
 		locale: 'en-US',
-		type: 'website'
-		/**
-			images: [
-				{
-					url: 'https://akpi.is-a.dev/logo.png',
-					type: 'image/png'
-				}
-			]
-		*/
+		type: 'website',
+		images: [
+			{
+				url: 'https://akpi.is-a.dev/assets/img/akpi-logo.svg',
+				type: 'image/png'
+			}
+		]
 	}
 };
 
@@ -95,14 +93,19 @@ export default function MainPage() {
 						<div className="columns">
 							<div className="column mr-6 mb-12" data-aos="fade-left">
 								<h1 className="title has-text-white has-text-weight-bold has-text-centered is-size-1">
-									Hey there! I&apos;m <Mono>akpi816218</Mono>.
+									Hey there! I&apos;m <Mono>akpi</Mono>.
 								</h1>
 							</div>
 							<div
 								className="column mt-12 title has-text-weight-light has-text-white"
 								data-aos="fade-right"
 							>
-								Or just <Mono>akpi</Mono> for short.
+								<Image
+									src="/assets/img/akpi-logo.svg"
+									alt="akpi logo"
+									width={300}
+									height={300}
+								/>
 							</div>
 						</div>
 						<div className="has-text-centered is-c2">

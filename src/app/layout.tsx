@@ -87,14 +87,14 @@ export const metadata: Metadata = {
 	keywords: [],
 	creator: 'Akhil Pillai',
 	generator: 'Next.js',
-	// icons: ['/logo.png'],
+	icons: ['/assets/img/akpi-logo.svg'],
 	metadataBase: new URL('/', 'https://akpi.is-a.dev/'),
 	description: "akpi's developer portfolio",
 	twitter: {
 		card: 'summary_large_image',
 		site: '@akpi816218',
 		creator: '@akpi816218',
-		// images: 'https://akpi.is-a.dev/banner.svg',
+		images: 'https://akpi.is-a.dev/assets/img/akpi-logo.svg',
 		description: "akpi's developer portfolio"
 	},
 	openGraph: {
@@ -104,19 +104,13 @@ export const metadata: Metadata = {
 		siteName: 'akpi',
 		countryName: 'United States',
 		locale: 'en-US',
-		type: 'website'
-		/**
-			images: [
-				{
-					url: 'https://discog.localplayer.dev/logo.png',
-					type: 'image/png'
-				},
-				{
-					url: 'https://discog.localplayer.dev/banner.svg',
-					type: 'image/svg+xml'
-				}
-			]
-		*/
+		type: 'website',
+		images: [
+			{
+				url: 'https://akpi.is-a.dev/assets/img/akpi-logo.svg',
+				type: 'image/svg+xml'
+			}
+		]
 	}
 };
 
@@ -126,7 +120,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en">
+		<html lang="en-US">
 			<body className={poppins.className}>{children}</body>
 		</html>
 	);
