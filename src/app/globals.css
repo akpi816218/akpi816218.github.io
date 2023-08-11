@@ -51,13 +51,6 @@ section.last {
 	padding-bottom: 10vh;
 }
 
-.column.skill {
-	padding: 1rem;
-	margin: 0.5rem;
-	border-radius: 10px;
-	border: solid 2px var(--c1);
-}
-
 .button-row {
 	justify-content: center;
 	margin: auto;
@@ -66,6 +59,7 @@ section.last {
 
 .mono {
 	font-family: 'Ubuntu Mono', 'Source Code Pro', 'Roboto Mono', monospace;
+	padding: 0 0.125em;
 }
 
 .blurple {
@@ -466,4 +460,34 @@ footer a:hover {
 
 .block {
 	display: block !important;
+}
+
+.skills {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+}
+
+.skill {
+	padding: 1rem;
+	margin: 0.5rem;
+	border-radius: 10px;
+	border: solid 2px var(--c1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* css media query for mobile devices */
+@media only screen and (max-width: 768px) {
+	section {
+		padding: auto;
+	}
+
+	.down-button,
+	.up-button {
+		display: none !important;
+	}
 }

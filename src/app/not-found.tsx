@@ -6,10 +6,7 @@ import {
 	library,
 	IconDefinition
 } from '@fortawesome/fontawesome-svg-core';
-import {
-	faServer,
-	faTerminal
-} from '@fortawesome/fontawesome-free-solid';
+import { faServer, faTerminal } from '@fortawesome/fontawesome-free-solid';
 import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 

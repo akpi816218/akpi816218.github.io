@@ -27,7 +27,7 @@ export default function ScriptLoader({
 								once: true
 							});
 							console.log('AOS initialized');
-						} catch { }
+						} catch {}
 					}}
 				/>
 				<Script src="/assets/js/script.js" strategy="afterInteractive" />

@@ -31,6 +31,7 @@ import ScriptLoader from '@/components/ScriptLoader';
 import Mono from '@/components/Mono';
 import { DownArrowButton } from '@/components/DownArrowButton';
 import UpArrowButton from '@/components/UpArrowButton';
+import Skill from '@/components/Skill';
 
 config.autoAddCss = false;
 library.add(
@@ -217,6 +218,21 @@ export default function MainPage() {
 								<span>YouTube</span>
 							</Button>
 							<Button
+								href="https://en.pronouns.page/@equus_quagga"
+								className="is-c2"
+							>
+								<span className="icon">
+									<Image
+										src="/assets/img/pronouns-page.svg"
+										alt="pronouns.page"
+										width={24}
+										height={24}
+										className="h1m"
+									/>
+								</span>
+								<span>pronouns.page</span>
+							</Button>
+							<Button
 								href="https://steamcommunity.com/id/equus-quagga/"
 								className="is-c2"
 							>
@@ -266,21 +282,34 @@ export default function MainPage() {
 							Skills
 						</h2>
 						<div className="line2 line-center mb-6" />
-						<div className="has-text-centered columns is-multiline is-size-4">
-							<div className="column skill">Backend with TypeScript</div>
-							<div className="column skill">Frontend with React</div>
-							<div className="column skill">Frontend with HTML/CSS/JS</div>
-							<div className="column skill">Web Design with HTML/CSS</div>
-							<div className="column skill">
-								Discord bots using TypeScript and{' '}
-								<Link
-									target="_blank"
-									href="https://discord.js.org"
-									className="mono"
-								>
-									Discord.js
-								</Link>
-							</div>
+						<div className="has-text-centered columns is-multiline is-size-4 skills">
+							<Skill>
+								Backend with <Mono>TypeScript</Mono>
+							</Skill>
+							<Skill>
+								Frontend with <Mono>React + Next.js</Mono>
+							</Skill>
+							<Skill>
+								Frontend with <Mono>HTML</Mono>/<Mono>CSS</Mono>/<Mono>JS</Mono>
+							</Skill>
+							<Skill>
+								Web Design with <Mono>HTML</Mono>/<Mono>CSS</Mono>
+							</Skill>
+							<Skill>
+								<span>
+									Discord bots using <Mono>TypeScript</Mono> and{' '}
+									<Link
+										target="_blank"
+										href="https://discord.js.org"
+										className="mono"
+									>
+										Discord.js
+									</Link>
+								</span>
+							</Skill>
+							<Skill>
+								Basic shell scripting with <Mono>Bash</Mono>
+							</Skill>
 						</div>
 					</div>
 				</div>
@@ -311,12 +340,12 @@ export default function MainPage() {
 							to a few days.
 						</p>
 						<div className="button-row">
-							<Button href="mailto:816218@seq.org">
+							<Button href="mailto:public@akpi.is-a.dev">
 								<span className="icon">
 									{/* @ts-expect-error */}
 									<FontAwesomeIcon icon={faEnvelope} />
 								</span>
-								<span>Email</span>
+								<span>Public Email</span>
 							</Button>
 							<Button href="/ext/osf">
 								<span className="icon">
