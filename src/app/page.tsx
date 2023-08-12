@@ -87,17 +87,17 @@ export default function MainPage() {
 
 			<Nav />
 
-			<section className="hero bg-base is-fullheight">
+			<section className="hero bg-base is-fullheight pt-5">
 				<div className="hero-body">
 					<div className="container">
 						<div className="columns">
-							<div className="column mr-6 mb-12" data-aos="fade-left">
+							<div className="column vcenter mr-6 mb-6" data-aos="fade-left">
 								<h1 className="title has-text-white has-text-weight-bold has-text-centered is-size-1">
 									Hey there! I&apos;m <Mono>akpi</Mono>.
 								</h1>
 							</div>
 							<div
-								className="column mt-12 title has-text-weight-light has-text-white"
+								className="column vcenter mb-12 title has-text-weight-light has-text-white"
 								data-aos="fade-right"
 							>
 								<Image
@@ -128,7 +128,7 @@ export default function MainPage() {
 							@akpi816218
 						</h2>
 						<div className="line line-center mb-4" />
-						<p className="is-centered has-text-weight-medium is-size-4 mb-4">
+						<p className="is-centered has-text-weight-medium is-size-5 mb-4">
 							Hi, I&apos;m <Mono>akpi816218</Mono>, a high school developer in
 							the United States. I&apos;m currently the sole developer of{' '}
 							<Link
@@ -330,7 +330,7 @@ export default function MainPage() {
 							Contact
 						</h2>
 						<div className="line2 line-center mb-4" />
-						<p className="is-centered is-c2 has-text-weight-medium is-size-4 mb-2">
+						<p className="is-centered is-c2 has-text-weight-medium is-size-5 mb-2">
 							Feel free to contact me via email or Discord. I&apos;m always open
 							to helping others or answering any questions, comments, or
 							concerns you may have about my projects. If you&apos;re interested
