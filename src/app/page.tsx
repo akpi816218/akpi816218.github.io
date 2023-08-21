@@ -29,9 +29,8 @@ import Footer from '@/components/Footer';
 import Button from '@/components/Button';
 import ScriptLoader from '@/components/ScriptLoader';
 import Mono from '@/components/Mono';
-import { DownArrowButton } from '@/components/DownArrowButton';
-import UpArrowButton from '@/components/UpArrowButton';
 import Skill from '@/components/Skill';
+import Waves from '@/components/Waves';
 
 config.autoAddCss = false;
 library.add(
@@ -47,13 +46,13 @@ export const metadata: Metadata = {
 	keywords: [],
 	creator: 'Akhil Pillai',
 	generator: 'Next.js',
-	// icons: ['/logo.png'],
+	icons: ['/assets/img/akpi-logo.svg'],
 	description: "akpi's developer portfolio",
 	twitter: {
 		card: 'summary_large_image',
 		site: '@akpi',
 		creator: '@akpi816218',
-		// images: 'https://akpi.is-a.dev/logo.png',
+		images: 'https://akpi.is-a.dev/assets/img/akpi-logo.svg',
 		description: "akpi's developer portfolio"
 	},
 	openGraph: {
@@ -63,15 +62,13 @@ export const metadata: Metadata = {
 		siteName: 'akpi',
 		countryName: 'United States',
 		locale: 'en-US',
-		type: 'website'
-		/**
-			images: [
-				{
-					url: 'https://akpi.is-a.dev/logo.png',
-					type: 'image/png'
-				}
-			]
-		*/
+		type: 'website',
+		images: [
+			{
+				url: 'https://akpi.is-a.dev/assets/img/akpi-logo.svg',
+				type: 'image/png'
+			}
+		]
 	}
 };
 
@@ -89,20 +86,25 @@ export default function MainPage() {
 
 			<Nav />
 
-			<section className="hero bg-base is-fullheight">
+			<section className="hero bg-base is-fullheight pt-5">
 				<div className="hero-body">
 					<div className="container">
 						<div className="columns">
-							<div className="column mr-6 mb-12" data-aos="fade-left">
+							<div className="column vcenter mr-6 mb-6" data-aos="fade-left">
 								<h1 className="title has-text-white has-text-weight-bold has-text-centered is-size-1">
-									Hey there! I&apos;m <Mono>akpi816218</Mono>.
+									Hey there! I&apos;m <Mono>akpi</Mono>.
 								</h1>
 							</div>
 							<div
-								className="column mt-12 title has-text-weight-light has-text-white"
+								className="column vcenter mb-12 title has-text-weight-light has-text-white"
 								data-aos="fade-right"
 							>
-								Or just <Mono>akpi</Mono> for short.
+								<Image
+									src="/assets/img/akpi-logo.svg"
+									alt="akpi logo"
+									width={300}
+									height={300}
+								/>
 							</div>
 						</div>
 						<div className="has-text-centered is-c2">
@@ -113,11 +115,10 @@ export default function MainPage() {
 						</div>
 					</div>
 				</div>
-				<DownArrowButton />
 			</section>
 
 			<section id="about" className="hero is-fullheight has-text-centered bg-4">
-				<UpArrowButton />
+				<Waves className="bg-base" />
 
 				<div className="hero-body">
 					<div className="container">
@@ -125,7 +126,7 @@ export default function MainPage() {
 							@akpi816218
 						</h2>
 						<div className="line line-center mb-4" />
-						<p className="is-centered has-text-weight-medium is-size-4 mb-4">
+						<p className="is-centered has-text-weight-medium is-size-5 mb-4">
 							Hi, I&apos;m <Mono>akpi816218</Mono>, a high school developer in
 							the United States. I&apos;m currently the sole developer of{' '}
 							<Link
@@ -265,8 +266,6 @@ export default function MainPage() {
 						</div>
 					</div>
 				</div>
-
-				<DownArrowButton />
 			</section>
 
 			{/* skills section */}
@@ -274,8 +273,6 @@ export default function MainPage() {
 				id="skills"
 				className="hero is-fullheight has-text-centered bg-3"
 			>
-				<UpArrowButton />
-
 				<div className="hero-body">
 					<div className="container">
 						<h2 className="title has-text-centered has-text-weight-bold has-text-white mono is-size-3 lined">
@@ -313,21 +310,17 @@ export default function MainPage() {
 						</div>
 					</div>
 				</div>
-
-				<DownArrowButton />
 			</section>
 
 			{/* contact section */}
 			<section id="contact" className="hero last has-text-centered bg-base">
-				<UpArrowButton />
-
 				<div className="hero-body">
 					<div className="container">
 						<h2 className="title has-text-centered has-text-weight-bold has-text-white mono is-size-3 lined">
 							Contact
 						</h2>
 						<div className="line2 line-center mb-4" />
-						<p className="is-centered is-c2 has-text-weight-medium is-size-4 mb-2">
+						<p className="is-centered is-c2 has-text-weight-medium is-size-5 mb-2">
 							Feel free to contact me via email or Discord. I&apos;m always open
 							to helping others or answering any questions, comments, or
 							concerns you may have about my projects. If you&apos;re interested

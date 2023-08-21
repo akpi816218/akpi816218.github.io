@@ -1,6 +1,16 @@
-export default function Waves({ color }: { color: string }) {
+export default function Waves({
+	className,
+	color
+}: {
+	className: string;
+	color?: string;
+}) {
 	return (
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 1440 320"
+			className={`waves${className ? ` ${className}` : ''}`}
+		>
 			<path
 				fill={color}
 				fillOpacity="1"
