@@ -73,6 +73,11 @@ section.last {
 	background-color: var(--bg) !important;
 }
 
+.waves.bg-base {
+	background-color: unset !important;
+	fill: var(--bg) !important;
+}
+
 .bg-3 {
 	background-color: var(--c3) !important;
 	color: var(--c2);

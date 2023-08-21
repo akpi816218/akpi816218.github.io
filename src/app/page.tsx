@@ -29,9 +29,8 @@ import Footer from '@/components/Footer';
 import Button from '@/components/Button';
 import ScriptLoader from '@/components/ScriptLoader';
 import Mono from '@/components/Mono';
-import { DownArrowButton } from '@/components/DownArrowButton';
-import UpArrowButton from '@/components/UpArrowButton';
 import Skill from '@/components/Skill';
+import Waves from '@/components/Waves';
 
 config.autoAddCss = false;
 library.add(
@@ -116,11 +115,10 @@ export default function MainPage() {
 						</div>
 					</div>
 				</div>
-				<DownArrowButton />
 			</section>
 
 			<section id="about" className="hero is-fullheight has-text-centered bg-4">
-				<UpArrowButton />
+				<Waves className="bg-base" />
 
 				<div className="hero-body">
 					<div className="container">
@@ -268,8 +266,6 @@ export default function MainPage() {
 						</div>
 					</div>
 				</div>
-
-				<DownArrowButton />
 			</section>
 
 			{/* skills section */}
@@ -277,8 +273,6 @@ export default function MainPage() {
 				id="skills"
 				className="hero is-fullheight has-text-centered bg-3"
 			>
-				<UpArrowButton />
-
 				<div className="hero-body">
 					<div className="container">
 						<h2 className="title has-text-centered has-text-weight-bold has-text-white mono is-size-3 lined">
@@ -316,14 +310,10 @@ export default function MainPage() {
 						</div>
 					</div>
 				</div>
-
-				<DownArrowButton />
 			</section>
 
 			{/* contact section */}
 			<section id="contact" className="hero last has-text-centered bg-base">
-				<UpArrowButton />
-
 				<div className="hero-body">
 					<div className="container">
 						<h2 className="title has-text-centered has-text-weight-bold has-text-white mono is-size-3 lined">
