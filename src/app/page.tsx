@@ -107,12 +107,6 @@ export default function MainPage() {
 								/>
 							</div>
 						</div>
-						<div className="has-text-centered is-c2">
-							Please don&apos;t scroll manually unless you must; use the arrow
-							buttons (or the arrow keys on your keyboard if you have one)
-							instead. Due to my lack of responsive design skills, this site is
-							best viewed on a large screen.
-						</div>
 					</div>
 				</div>
 			</section>
