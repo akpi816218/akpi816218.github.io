@@ -1,24 +1,9 @@
 import RootLayout from './layout';
 import Link from 'next/link';
 import Nav from '@/components/Nav';
-import {
-	config,
-	library,
-	IconDefinition
-} from '@fortawesome/fontawesome-svg-core';
-import { faServer, faTerminal } from '@fortawesome/fontawesome-free-solid';
-import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
-import '@fortawesome/fontawesome-svg-core/styles.css';
+import Footer from '@/components/Footer';
 
-config.autoAddCss = false;
-library.add(
-	faServer as IconDefinition,
-	faTerminal as IconDefinition,
-	faDiscord as IconDefinition,
-	faGithub as IconDefinition
-);
-
-export default function Err404Page() {
+export default function Error404Page() {
 	return (
 		<RootLayout>
 			{/* <Link id="backtotop" data-tippy-content="Back To Top." href="">
@@ -42,7 +27,7 @@ export default function Err404Page() {
 									data-aos="fade-right"
 									data-aos-duration="1000"
 								>
-									<span className="mono">404</span>: Page not found
+									<span className="mono has-text-white">404</span>: Page not found
 								</h1>
 							</div>
 							<div className="column is-6 is-offset-1">
@@ -75,6 +60,8 @@ export default function Err404Page() {
 					</div>
 				</div>
 			</section>
+
+			<Footer />
 		</RootLayout>
 	);
 }

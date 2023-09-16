@@ -31,6 +31,7 @@ import ScriptLoader from '@/components/ScriptLoader';
 import Mono from '@/components/Mono';
 import Skill from '@/components/Skill';
 import Waves from '@/components/Waves';
+import Project from '@/components/Project';
 
 config.autoAddCss = false;
 library.add(
@@ -108,10 +109,7 @@ export default function MainPage() {
 							</div>
 						</div>
 						<div className="has-text-centered is-c2">
-							Please don&apos;t scroll manually unless you must; use the arrow
-							buttons (or the arrow keys on your keyboard if you have one)
-							instead. Due to my lack of responsive design skills, this site is
-							best viewed on a large screen.
+							Please don&apos;t scroll manually unless you must; use the left and right arrow keys on your keyboard if you have one instead. Due to my lack of responsive design skills, this site is best viewed on a large screen.
 						</div>
 					</div>
 				</div>
@@ -163,7 +161,7 @@ export default function MainPage() {
 								<span>GitHub</span>
 							</Button>
 							<Button href="/ext/osf" className="is-c2">
-								<span className="icon">
+								<span className="icon blurple">
 									{/* @ts-expect-error */}
 									<FontAwesomeIcon icon={faDiscord} />
 								</span>
@@ -173,7 +171,9 @@ export default function MainPage() {
 								href="https://www.npmjs.com/~akpi816218"
 								className="is-c2"
 							>
-								<span className="icon">
+								<span className="icon" style={{
+									color: 'red'
+								}}>
 									{/* @ts-expect-error */}
 									<FontAwesomeIcon icon={faNpm} />
 								</span>
@@ -189,7 +189,7 @@ export default function MainPage() {
 							<Button href="https://ch.tetr.io/u/akpi816218" className="is-c2">
 								<span className="icon">
 									<Image
-										src="/assets/img/tetrio-mono-dark.svg"
+										src="/assets/img/tetrio-color.svg"
 										alt="TETR.IO"
 										width={24}
 										height={24}
@@ -202,7 +202,9 @@ export default function MainPage() {
 								href="https://open.spotify.com/user/asobwyv313i67m4mvf2z0lzjm?si=e2b3492ce7e848bb"
 								className="is-c2"
 							>
-								<span className="icon">
+								<span className="icon" style={{
+									color: '#1DB954'
+								}}>
 									{/* @ts-expect-error */}
 									<FontAwesomeIcon icon={faSpotify} />
 								</span>
@@ -212,7 +214,9 @@ export default function MainPage() {
 								href="https://youtube.com/@equus_quagga"
 								className="is-c2"
 							>
-								<span className="icon">
+								<span className="icon" style={{
+									color: 'red'
+								}}>
 									{/* @ts-expect-error */}
 									<FontAwesomeIcon icon={faYoutube} />
 								</span>
@@ -222,7 +226,9 @@ export default function MainPage() {
 								href="https://en.pronouns.page/@equus_quagga"
 								className="is-c2"
 							>
-								<span className="icon">
+								<span className="icon" style={{
+									color: '#c71585'
+								}}>
 									<Image
 										src="/assets/img/pronouns-page.svg"
 										alt="pronouns.page"
@@ -244,26 +250,6 @@ export default function MainPage() {
 								<span>Steam</span>
 							</Button>
 						</div>
-						<div className="button-row">
-							<Button href="https://discog.localplayer.dev" className="is-c3">
-								DisCog
-							</Button>
-							<Button href="https://pronouns.js.org" className="is-c3">
-								pronouns.js
-							</Button>
-							<Button
-								href="https://www.npmjs.com/package/tsfm"
-								className="is-c3"
-							>
-								tsfm
-							</Button>
-							<Button
-								href="https://www.npmjs.com/package/feces-cli"
-								className="is-c3"
-							>
-								feces-cli
-							</Button>
-						</div>
 					</div>
 				</div>
 			</section>
@@ -273,6 +259,8 @@ export default function MainPage() {
 				id="skills"
 				className="hero is-fullheight has-text-centered bg-3"
 			>
+				<Waves className="bg-4" />
+
 				<div className="hero-body">
 					<div className="container">
 						<h2 className="title has-text-centered has-text-weight-bold has-text-white mono is-size-3 lined">
@@ -312,8 +300,58 @@ export default function MainPage() {
 				</div>
 			</section>
 
+			{/* projects section */}
+			<section id="projects" className="hero is-fullheight has-text-centered bg-4">
+				<Waves className="bg-3" />
+
+				<div className="hero-body">
+					<div className="container">
+						<h2 className="title has-text-centered has-text-weight-bold has-text-white mono is-size-3 lined">
+							Projects
+						</h2>
+						<div className="line2 line-center mb-6" />
+						<div className="has-text-centered columns is-multiline is-centered is-size-4 skills">
+							<Project>
+								<Link
+									target="_blank"
+									href="https://discog.localplayer.dev"
+								>
+									DisCog — The optimal Discord bot for your server
+								</Link>
+							</Project>
+							<Project>
+								<Link
+									target="_blank"
+									href="https://pronouns.js.org"
+								>
+									<Mono>pronouns.js</Mono> — A simple, lightweight, typed, and easy-to-use pronoun library
+								</Link>
+							</Project>
+							<Project>
+								<Link
+									target="_blank"
+									href="https://www.npmjs.com/package/tsfm"
+								>
+									<Mono>tsfm</Mono> — A lightweight file tree viewer written in <Mono>TypeScript</Mono>
+								</Link>
+							</Project>
+							<Project>
+								<Link
+									target="_blank"
+									href="https://www.npmjs.com/package/feces-cli"
+								>
+									<Mono>feces-cli</Mono> — A creatively named CLI trash file manager written in <Mono>TypeScript</Mono>
+								</Link>
+							</Project>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			{/* contact section */}
-			<section id="contact" className="hero last has-text-centered bg-base">
+			<section id="contact" className="hero last has-text-centered bg-base pt-0">
+				<Waves className="bg-4" />
+
 				<div className="hero-body">
 					<div className="container">
 						<h2 className="title has-text-centered has-text-weight-bold has-text-white mono is-size-3 lined">
@@ -334,14 +372,14 @@ export default function MainPage() {
 						</p>
 						<div className="button-row">
 							<Button href="mailto:public@akpi.is-a.dev">
-								<span className="icon">
+								<span className="icon is-c1">
 									{/* @ts-expect-error */}
 									<FontAwesomeIcon icon={faEnvelope} />
 								</span>
 								<span>Public Email</span>
 							</Button>
 							<Button href="/ext/osf">
-								<span className="icon">
+								<span className="icon blurple">
 									{/* @ts-expect-error */}
 									<FontAwesomeIcon icon={faDiscord} />
 								</span>

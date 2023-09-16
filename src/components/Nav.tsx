@@ -25,18 +25,22 @@ export default function Nav() {
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
 				</Link>
 			</div>
 
 			<div id="navbarBasicExample" className="navbar-menu">
 				<div className="navbar-start">
-					<Link href="/#about" className="navbar-item is-tab">
+					<Link href="/#about" className="jq-scroll navbar-item is-tab">
 						About
 					</Link>
-					<Link href="/#skills" className="navbar-item is-tab">
+					<Link href="/#skills" className="jq-scroll navbar-item is-tab">
 						Skills
 					</Link>
-					<Link href="/#contact" className="navbar-item is-tab">
+					<Link href="/#projects" className="jq-scroll navbar-item is-tab">
+						Projects
+					</Link>
+					<Link href="/#contact" className="jq-scroll navbar-item is-tab">
 						Contact
 					</Link>
 				</div>

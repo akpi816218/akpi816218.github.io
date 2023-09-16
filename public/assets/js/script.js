@@ -22,6 +22,7 @@ $(document).on('ready', function () {
 		$('.navbar-burger').toggleClass('is-active');
 		$('.navbar-menu').toggleClass('is-active');
 	});
+	window.location.hash = window.location.hash || '#';
 });
 
 // navbar on scroll
@@ -46,12 +47,15 @@ $(() => {
 });
 
 const duration_easing = 50,
-	sections = ['', '#about', '#skills', '#contact'];
+	sections = ['', '#about', '#skills', '#projects', '#contact'];
 $(document).on('keydown', (e) => {
 	const index = sections.indexOf(window.location.hash);
 	let hash = '';
 	if (
-		(e.code === 'ArrowDown' || e.code === 'ArrowRight' || e.code === 'Enter') &&
+		(e.code === 'ArrowDown' ||
+			e.code === 'ArrowRight' ||
+			e.code === 'Enter' ||
+			e.code === 'Space') &&
 		index < sections.length - 1
 	) {
 		e.preventDefault();
@@ -62,8 +66,9 @@ $(document).on('keydown', (e) => {
 		else if (index > 0) hash = sections[index - 1];
 	}
 	window.location.hash = hash;
+	if (hash !== '') $(document).scrollTop($(hash).offset().top + 175);
 });
-$('.down-button').on('click', () => {
+/*$('.down-button').on('click', () => {
 	$('html, body').animate(
 		{
 			scrollTop: $(window).scrollTop() + $(window).height()
@@ -78,20 +83,27 @@ $('.up-button').on('click', () => {
 		},
 		duration_easing
 	);
+});*/
+
+$('navbar a').on('click', (e) => {
+	e.preventDefault();
+	const hash = e.target.hash;
+	window.location.hash = hash;
+	$(document).scrollTop($(hash).offset().top + 175);
 });
 
 // back to top
-var btn = $('#backtotop');
+var $backToTop = $('#backtotop');
 
 $(window).on('scroll', () => {
 	if ($(window).scrollTop() > 100) {
-		btn.addClass('show');
+		$backToTop.addClass('show');
 	} else {
-		btn.removeClass('show');
+		$backToTop.removeClass('show');
 	}
 });
 
-btn.on('click', (e) => {
+$backToTop.on('click', (e) => {
 	e.preventDefault();
 	$('html, body').animate({ scrollTop: 0 }, duration_easing);
 });

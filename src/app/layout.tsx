@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import './aos@2.3.1.min.css';
 import './bulma.min.css';
 import './globals.css';
@@ -121,7 +122,9 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en-US">
-			<body className={poppins.className}>{children}</body>
+			<body className={poppins.className}>{children}
+				<Script defer data-domain="akpi.is-a.dev" src="https://analytics.is-a.dev/js/script.js" />
+			</body>
 		</html>
 	);
 }
