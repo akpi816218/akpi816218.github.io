@@ -48,7 +48,6 @@ section p {
 
 section {
 	max-width: 100vw;
-	padding-bottom: 3rem;
 }
 
 section.last {
@@ -60,6 +59,9 @@ section.last {
 }
 
 .button-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 	justify-content: center;
 	margin: auto;
 	padding-top: 2rem;
@@ -87,19 +89,24 @@ section.last {
 	padding: 0;
 }
 
-.waves.bg-base {
-	background-color: unset !important;
-	fill: var(--bg) !important;
+.fill-base {
+	fill: var(--bg);
 }
 
-.waves.bg-3 {
-	background-color: unset !important;
-	fill: var(--c3) !important;
+.fill-1 {
+	fill: var(--c1);
 }
 
-.waves.bg-4 {
-	background-color: unset !important;
-	fill: var(--c4) !important;
+.fill-2 {
+	fill: var(--c2);
+}
+
+.fill-3 {
+	fill: var(--c3);
+}
+
+.fill-4 {
+	fill: var(--c4);
 }
 
 .bg-3 {
@@ -127,6 +134,10 @@ section.last {
 
 .is-c3 {
 	color: var(--c3);
+}
+
+.is-c4 {
+	color: var(--c4);
 }
 
 #backtotop {
@@ -548,7 +559,7 @@ footer a:hover {
 	} */
 
 	100% {
-		transform: scaleX(-1)
+		transform: scaleX(-1);
 	}
 }
 
@@ -556,7 +567,7 @@ footer a:hover {
 	transform: none;
 }
 
-.project:hover>.project-interior {
+.project:hover > .project-interior {
 	transform: none;
 	animation: project-flip var(--invert-speed) normal;
 }

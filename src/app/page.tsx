@@ -2,17 +2,7 @@ import Image from 'next/image';
 import RootLayout from './layout';
 import Link from 'next/link';
 import Nav from '@/components/Nav';
-import {
-	config,
-	library,
-	IconDefinition
-} from '@fortawesome/fontawesome-svg-core';
-import {
-	faArrowUp,
-	faServer,
-	faTerminal,
-	faEnvelope
-} from '@fortawesome/fontawesome-free-solid';
+import { faArrowUp, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import {
 	faDev,
 	faDiscord,
@@ -24,7 +14,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import { Metadata } from 'next';
+import { metadata as _metadata } from './layout';
 import Footer from '@/components/Footer';
 import Button from '@/components/Button';
 import ScriptLoader from '@/components/ScriptLoader';
@@ -33,45 +23,7 @@ import Skill from '@/components/Skill';
 import Waves from '@/components/Waves';
 import Project from '@/components/Project';
 
-config.autoAddCss = false;
-library.add(
-	faServer as IconDefinition,
-	faTerminal as IconDefinition,
-	faDiscord as IconDefinition,
-	faGithub as IconDefinition
-);
-
-export const metadata: Metadata = {
-	title: 'akpi',
-	authors: { name: 'Akhil Pillai' },
-	keywords: [],
-	creator: 'Akhil Pillai',
-	generator: 'Next.js',
-	icons: ['/assets/img/akpi-logo.svg'],
-	description: "akpi's developer portfolio",
-	twitter: {
-		card: 'summary_large_image',
-		site: '@akpi',
-		creator: '@akpi816218',
-		images: 'https://akpi.is-a.dev/assets/img/akpi-logo.svg',
-		description: "akpi's developer portfolio"
-	},
-	openGraph: {
-		title: 'akpi',
-		description: "akpi's developer portfolio",
-		url: 'https://akpi.is-a.dev',
-		siteName: 'akpi',
-		countryName: 'United States',
-		locale: 'en-US',
-		type: 'website',
-		images: [
-			{
-				url: 'https://akpi.is-a.dev/assets/img/akpi-logo.svg',
-				type: 'image/png'
-			}
-		]
-	}
-};
+export const metadata = _metadata;
 
 export default function MainPage() {
 	return (
@@ -87,7 +39,7 @@ export default function MainPage() {
 
 			<Nav />
 
-			<section className="hero bg-base is-fullheight pt-5">
+			<section className="hero bg-base is-fullheight-with-navbar pt-12">
 				<div className="hero-body">
 					<div className="container">
 						<div className="columns">
@@ -109,15 +61,16 @@ export default function MainPage() {
 							</div>
 						</div>
 						<div className="has-text-centered is-c2">
-							Please don&apos;t scroll manually unless you must; use the left and right arrow keys on your keyboard if you have one instead. Due to my lack of responsive design skills, this site is best viewed on a large screen.
+							Arrow keys have animated scrolling! Due to my lack of responsive
+							design skills, this site is best viewed on a large screen.
 						</div>
 					</div>
 				</div>
+
+				<Waves className="fill-base bg-4" />
 			</section>
 
 			<section id="about" className="hero is-fullheight has-text-centered bg-4">
-				<Waves className="bg-base" />
-
 				<div className="hero-body">
 					<div className="container">
 						<h2 className="title has-text-centered has-text-weight-bold has-text-white mono is-size-3 lined">
@@ -171,9 +124,12 @@ export default function MainPage() {
 								href="https://www.npmjs.com/~akpi816218"
 								className="is-c2"
 							>
-								<span className="icon" style={{
-									color: 'red'
-								}}>
+								<span
+									className="icon"
+									style={{
+										color: 'red'
+									}}
+								>
 									{/* @ts-expect-error */}
 									<FontAwesomeIcon icon={faNpm} />
 								</span>
@@ -202,9 +158,12 @@ export default function MainPage() {
 								href="https://open.spotify.com/user/asobwyv313i67m4mvf2z0lzjm?si=e2b3492ce7e848bb"
 								className="is-c2"
 							>
-								<span className="icon" style={{
-									color: '#1DB954'
-								}}>
+								<span
+									className="icon"
+									style={{
+										color: '#1DB954'
+									}}
+								>
 									{/* @ts-expect-error */}
 									<FontAwesomeIcon icon={faSpotify} />
 								</span>
@@ -214,9 +173,12 @@ export default function MainPage() {
 								href="https://youtube.com/@equus_quagga"
 								className="is-c2"
 							>
-								<span className="icon" style={{
-									color: 'red'
-								}}>
+								<span
+									className="icon"
+									style={{
+										color: 'red'
+									}}
+								>
 									{/* @ts-expect-error */}
 									<FontAwesomeIcon icon={faYoutube} />
 								</span>
@@ -226,9 +188,12 @@ export default function MainPage() {
 								href="https://en.pronouns.page/@equus_quagga"
 								className="is-c2"
 							>
-								<span className="icon" style={{
-									color: '#c71585'
-								}}>
+								<span
+									className="icon"
+									style={{
+										color: '#c71585'
+									}}
+								>
 									<Image
 										src="/assets/img/pronouns-page.svg"
 										alt="pronouns.page"
@@ -252,6 +217,7 @@ export default function MainPage() {
 						</div>
 					</div>
 				</div>
+				<Waves className="bg-3 fill-4" />
 			</section>
 
 			{/* skills section */}
@@ -259,8 +225,6 @@ export default function MainPage() {
 				id="skills"
 				className="hero is-fullheight has-text-centered bg-3"
 			>
-				<Waves className="bg-4" />
-
 				<div className="hero-body">
 					<div className="container">
 						<h2 className="title has-text-centered has-text-weight-bold has-text-white mono is-size-3 lined">
@@ -298,12 +262,14 @@ export default function MainPage() {
 						</div>
 					</div>
 				</div>
+				<Waves className="fill-3 bg-4" />
 			</section>
 
 			{/* projects section */}
-			<section id="projects" className="hero is-fullheight has-text-centered bg-4">
-				<Waves className="bg-3" />
-
+			<section
+				id="projects"
+				className="hero is-fullheight has-text-centered bg-4"
+			>
 				<div className="hero-body">
 					<div className="container">
 						<h2 className="title has-text-centered has-text-weight-bold has-text-white mono is-size-3 lined">
@@ -312,27 +278,20 @@ export default function MainPage() {
 						<div className="line2 line-center mb-6" />
 						<div className="has-text-centered columns is-multiline is-centered is-size-4 skills">
 							<Project>
-								<Link
-									target="_blank"
-									href="https://discog.localplayer.dev"
-								>
+								<Link target="_blank" href="https://discog.localplayer.dev">
 									DisCog — The optimal Discord bot for your server
 								</Link>
 							</Project>
 							<Project>
-								<Link
-									target="_blank"
-									href="https://pronouns.js.org"
-								>
-									<Mono>pronouns.js</Mono> — A simple, lightweight, typed, and easy-to-use pronoun library
+								<Link target="_blank" href="https://pronouns.js.org">
+									<Mono>pronouns.js</Mono> — A simple, lightweight, typed, and
+									easy-to-use pronoun library
 								</Link>
 							</Project>
 							<Project>
-								<Link
-									target="_blank"
-									href="https://www.npmjs.com/package/tsfm"
-								>
-									<Mono>tsfm</Mono> — A lightweight file tree viewer written in <Mono>TypeScript</Mono>
+								<Link target="_blank" href="https://www.npmjs.com/package/tsfm">
+									<Mono>tsfm</Mono> — A lightweight file tree viewer written in{' '}
+									<Mono>TypeScript</Mono>
 								</Link>
 							</Project>
 							<Project>
@@ -340,18 +299,22 @@ export default function MainPage() {
 									target="_blank"
 									href="https://www.npmjs.com/package/feces-cli"
 								>
-									<Mono>feces-cli</Mono> — A creatively named CLI trash file manager written in <Mono>TypeScript</Mono>
+									<Mono>feces-cli</Mono> — A creatively named CLI trash file
+									manager written in <Mono>TypeScript</Mono>
 								</Link>
 							</Project>
 						</div>
 					</div>
 				</div>
+
+				<Waves className="fill-4 bg-base" />
 			</section>
 
 			{/* contact section */}
-			<section id="contact" className="hero last has-text-centered bg-base pt-0">
-				<Waves className="bg-4" />
-
+			<section
+				id="contact"
+				className="hero pt-0 last has-text-centered bg-base"
+			>
 				<div className="hero-body">
 					<div className="container">
 						<h2 className="title has-text-centered has-text-weight-bold has-text-white mono is-size-3 lined">

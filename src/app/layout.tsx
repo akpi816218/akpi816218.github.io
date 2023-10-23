@@ -1,9 +1,9 @@
-import Script from 'next/script';
-import './aos@2.3.1.min.css';
-import './bulma.min.css';
+import 'aos/dist/aos.css';
+import 'bulma/css/bulma.css';
 import './globals.css';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import Script from 'next/script';
 
 const poppins = localFont({
 	src: [
@@ -88,19 +88,19 @@ export const metadata: Metadata = {
 	keywords: [],
 	creator: 'Akhil Pillai',
 	generator: 'Next.js',
-	icons: ['/assets/img/akpi-logo.svg'],
+	icons: ['/assets/img/akpi-logo.webp'],
 	metadataBase: new URL('/', 'https://akpi.is-a.dev/'),
-	description: "akpi's developer portfolio",
+	description: "akpi's personal portfolio website",
 	twitter: {
 		card: 'summary_large_image',
 		site: '@akpi816218',
 		creator: '@akpi816218',
-		images: 'https://akpi.is-a.dev/assets/img/akpi-logo.svg',
-		description: "akpi's developer portfolio"
+		images: 'https://akpi.is-a.dev/assets/img/akpi-logo.png',
+		description: "akpi's personal portfolio website"
 	},
 	openGraph: {
 		title: 'akpi',
-		description: "akpi's developer portfolio",
+		description: "akpi's personal portfolio website",
 		url: 'https://akpi.is-a.dev',
 		siteName: 'akpi',
 		countryName: 'United States',
@@ -108,8 +108,8 @@ export const metadata: Metadata = {
 		type: 'website',
 		images: [
 			{
-				url: 'https://akpi.is-a.dev/assets/img/akpi-logo.svg',
-				type: 'image/svg+xml'
+				url: 'https://akpi.is-a.dev/assets/img/akpi-logo.png',
+				type: 'image/png'
 			}
 		]
 	}
@@ -122,9 +122,12 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en-US">
-			<body className={poppins.className}>{children}
-				<Script defer data-domain="akpi.is-a.dev" src="https://analytics.is-a.dev/js/script.js" />
-			</body>
+			<body className={poppins.className}>{children}</body>
+			<Script
+				defer
+				data-domain="akpi.is-a.dev"
+				src="https://analytics.is-a.dev/js/script.js"
+			/>
 		</html>
 	);
 }

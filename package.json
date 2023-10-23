@@ -1,44 +1,38 @@
 {
 	"dependencies": {
-		"@fortawesome/fontawesome": "^1.1.8",
-		"@fortawesome/fontawesome-free-solid": "^5.0.13",
 		"@fortawesome/free-brands-svg-icons": "^6.4.2",
+		"@fortawesome/free-solid-svg-icons": "^6.4.2",
 		"@fortawesome/react-fontawesome": "^0.2.0",
-		"@types/node": "^20.5.1",
-		"@types/react": "^18.2.20",
-		"@types/react-dom": "^18.2.7",
-		"autoprefixer": "^10.4.15",
-		"eslint": "^8.47.0",
-		"eslint-config-next": "^13.4.19",
-		"next": "^13.4.19",
-		"postcss": "^8.4.28",
+		"aos": "^2.3.4",
+		"bulma": "^0.9.4",
+		"eslint": "^8.52.0",
+		"eslint-config-next": "^13.5.6",
+		"jquery": "^3.7.1",
+		"next": "^13.5.6",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"tailwindcss": "^3.3.3",
-		"typescript": "^5.1.6"
+		"react-dom": "^18.2.0"
 	},
-	"name": "akpi",
 	"private": true,
 	"scripts": {
-		"b": "next build",
 		"build": "next build",
-		"d": "next dev",
+		"bundle": "ncu -u aos bulma jquery && npm i && cat ./node_modules/jquery/dist/jquery.min.js ./node_modules/aos/dist/aos.js ./src/app/main.js > ./public/assets/js/dist-bundle.min.js",
 		"dev": "next dev",
-		"f": "prettier -w .",
 		"format": "prettier -w .",
-		"l": "next lint",
 		"lint": "next lint",
 		"start": "serve out",
-		"s": "serve out",
-		"u": "ncu -u && npm i",
 		"update": "ncu -u && npm i"
 	},
 	"type": "module",
-	"version": "0.1.0",
 	"devDependencies": {
-		"@types/jquery": "^3.5.16",
-		"npm-check-updates": "^16.12.2",
-		"prettier": "^3.0.2",
-		"serve": "^14.2.1"
+		"@types/jquery": "^3.5.24",
+		"@types/node": "^20.8.7",
+		"@types/react": "^18.2.31",
+		"@types/react-dom": "^18.2.14",
+		"npm-check-updates": "^16.14.6",
+		"prettier": "^3.0.3",
+		"serve": "^14.2.1",
+		"tailwindcss": "^3.3.3",
+		"typescript": "^5.2.2",
+		"uglify-js": "^3.17.4"
 	}
 }

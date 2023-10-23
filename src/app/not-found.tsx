@@ -27,7 +27,8 @@ export default function Error404Page() {
 									data-aos="fade-right"
 									data-aos-duration="1000"
 								>
-									<span className="mono has-text-white">404</span>: Page not found
+									<span className="mono has-text-white">404</span>: Page not
+									found
 								</h1>
 							</div>
 							<div className="column is-6 is-offset-1">
