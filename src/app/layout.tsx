@@ -3,6 +3,7 @@ import 'bulma/css/bulma.css';
 import './globals.css';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import Script from 'next/script';
 
 const poppins = localFont({
 	src: [
@@ -122,6 +123,11 @@ export default function RootLayout({
 	return (
 		<html lang="en-US">
 			<body className={poppins.className}>{children}</body>
+			<Script
+				defer
+				data-domain="akpi.is-a.dev"
+				src="https://analytics.is-a.dev/js/script.js"
+			/>
 		</html>
 	);
 }

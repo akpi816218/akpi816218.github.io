@@ -12,8 +12,7 @@ export default function Button({
 	return (
 		<Link
 			href={href}
-			className={`button is-rounded is-medium m-2 ${
-				className}`}
+			className={`button is-rounded is-medium m-2 ${className}`}
 			target="_blank"
 		>
 			{children}

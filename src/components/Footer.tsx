@@ -5,9 +5,9 @@ import Link from 'next/link';
 
 export default function Footer() {
 	return (
-		<footer className="bg-base content has-text-centered has-text-white pb-6 pt-6 mb-0">
+		<footer className="bg-base content has-text-centered has-text-white mb-0">
 			<div className="mb-2">
-				<Link href="/ext/osf" className="has-text-white mr-2" target="_blank">
+				<Link href="/ext/osf" className="mr-2 blurple" target="_blank">
 					{/* @ts-expect-error */}
 					<FontAwesomeIcon icon={faDiscord} size="xl" />
 				</Link>

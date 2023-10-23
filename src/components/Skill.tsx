@@ -1,6 +1,12 @@
-export default function Skill({ children }: { children: React.ReactNode }) {
+export default function Skill({
+	children,
+	style
+}: {
+	children: React.ReactNode;
+	style?: React.CSSProperties;
+}) {
 	return (
-		<div className="skill">
+		<div className="skill" style={style}>
 			<span>{children}</span>
 		</div>
 	);

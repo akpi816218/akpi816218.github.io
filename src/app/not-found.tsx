@@ -1,8 +1,9 @@
 import RootLayout from './layout';
 import Link from 'next/link';
 import Nav from '@/components/Nav';
+import Footer from '@/components/Footer';
 
-export default function Err404Page() {
+export default function Error404Page() {
 	return (
 		<RootLayout>
 			{/* <Link id="backtotop" data-tippy-content="Back To Top." href="">
@@ -26,7 +27,8 @@ export default function Err404Page() {
 									data-aos="fade-right"
 									data-aos-duration="1000"
 								>
-									<span className="mono">404</span>: Page not found
+									<span className="mono has-text-white">404</span>: Page not
+									found
 								</h1>
 							</div>
 							<div className="column is-6 is-offset-1">
@@ -59,6 +61,8 @@ export default function Err404Page() {
 					</div>
 				</div>
 			</section>
+
+			<Footer />
 		</RootLayout>
 	);
 }
