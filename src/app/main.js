@@ -1,3 +1,8 @@
+AOS.init({
+	duration: 700,
+	once: false
+});
+
 // navbar burger
 document.addEventListener('DOMContentLoaded', () => {
 	const $navbarBurgers = Array.prototype.slice.call(
@@ -45,7 +50,7 @@ $(() => {
 	});
 });
 
-const duration_easing = 50,
+const durationEasing = 50,
 	sections = ['', '#about', '#skills', '#contact'];
 $(document).on('keydown', (e) => {
 	const index = sections.indexOf(window.location.hash);
@@ -58,17 +63,22 @@ $(document).on('keydown', (e) => {
 		hash = sections[index + 1];
 	} else if (e.code === 'ArrowUp' || e.code === 'ArrowLeft') {
 		e.preventDefault();
-		if (e.ctrlKey || e.altKey) hash = sections[0];
-		else if (index > 0) hash = sections[index - 1];
+		if (index > 0) hash = sections[index - 1];
 	}
 	window.location.hash = hash;
+	$('html, body').animate(
+		{
+			scrollTop: $(hash).offset().top - $('nav').height()
+		},
+		durationEasing
+	);
 });
 $('.down-button').on('click', () => {
 	$('html, body').animate(
 		{
 			scrollTop: $(window).scrollTop() + $(window).height()
 		},
-		duration_easing
+		durationEasing
 	);
 });
 $('.up-button').on('click', () => {
@@ -76,7 +86,7 @@ $('.up-button').on('click', () => {
 		{
 			scrollTop: $(window).scrollTop() - $(window).height()
 		},
-		duration_easing
+		durationEasing
 	);
 });
 

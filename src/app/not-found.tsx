@@ -1,22 +1,6 @@
 import RootLayout from './layout';
 import Link from 'next/link';
 import Nav from '@/components/Nav';
-import {
-	config,
-	library,
-	IconDefinition
-} from '@fortawesome/fontawesome-svg-core';
-import { faServer, faTerminal } from '@fortawesome/fontawesome-free-solid';
-import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
-import '@fortawesome/fontawesome-svg-core/styles.css';
-
-config.autoAddCss = false;
-library.add(
-	faServer as IconDefinition,
-	faTerminal as IconDefinition,
-	faDiscord as IconDefinition,
-	faGithub as IconDefinition
-);
 
 export default function Err404Page() {
 	return (

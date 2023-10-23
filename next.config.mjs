@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+/** @type {import('next/config')} */
 const nextConfig = {
 	output: 'export',
 	distDir: 'out',

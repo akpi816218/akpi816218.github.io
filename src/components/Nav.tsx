@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 
 export default function Nav() {
 	return (

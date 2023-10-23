@@ -2,17 +2,7 @@ import Image from 'next/image';
 import RootLayout from './layout';
 import Link from 'next/link';
 import Nav from '@/components/Nav';
-import {
-	config,
-	library,
-	IconDefinition
-} from '@fortawesome/fontawesome-svg-core';
-import {
-	faArrowUp,
-	faServer,
-	faTerminal,
-	faEnvelope
-} from '@fortawesome/fontawesome-free-solid';
+import { faArrowUp, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import {
 	faDev,
 	faDiscord,
@@ -24,7 +14,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import { Metadata } from 'next';
+import { metadata as _metadata } from './layout';
 import Footer from '@/components/Footer';
 import Button from '@/components/Button';
 import ScriptLoader from '@/components/ScriptLoader';
@@ -32,45 +22,7 @@ import Mono from '@/components/Mono';
 import Skill from '@/components/Skill';
 import Waves from '@/components/Waves';
 
-config.autoAddCss = false;
-library.add(
-	faServer as IconDefinition,
-	faTerminal as IconDefinition,
-	faDiscord as IconDefinition,
-	faGithub as IconDefinition
-);
-
-export const metadata: Metadata = {
-	title: 'akpi',
-	authors: { name: 'Akhil Pillai' },
-	keywords: [],
-	creator: 'Akhil Pillai',
-	generator: 'Next.js',
-	icons: ['/assets/img/akpi-logo.svg'],
-	description: "akpi's developer portfolio",
-	twitter: {
-		card: 'summary_large_image',
-		site: '@akpi',
-		creator: '@akpi816218',
-		images: 'https://akpi.is-a.dev/assets/img/akpi-logo.svg',
-		description: "akpi's developer portfolio"
-	},
-	openGraph: {
-		title: 'akpi',
-		description: "akpi's developer portfolio",
-		url: 'https://akpi.is-a.dev',
-		siteName: 'akpi',
-		countryName: 'United States',
-		locale: 'en-US',
-		type: 'website',
-		images: [
-			{
-				url: 'https://akpi.is-a.dev/assets/img/akpi-logo.svg',
-				type: 'image/png'
-			}
-		]
-	}
-};
+export const metadata = _metadata;
 
 export default function MainPage() {
 	return (
@@ -86,7 +38,7 @@ export default function MainPage() {
 
 			<Nav />
 
-			<section className="hero bg-base is-fullheight pt-5">
+			<section className="hero bg-base is-fullheight-with-navbar pt-12">
 				<div className="hero-body">
 					<div className="container">
 						<div className="columns">
@@ -108,18 +60,16 @@ export default function MainPage() {
 							</div>
 						</div>
 						<div className="has-text-centered is-c2">
-							Please don&apos;t scroll manually unless you must; use the arrow
-							buttons (or the arrow keys on your keyboard if you have one)
-							instead. Due to my lack of responsive design skills, this site is
+							Arrow keys have animated scrolling! Due to my lack of responsive design skills, this site is
 							best viewed on a large screen.
 						</div>
 					</div>
 				</div>
+
+				<Waves className="fill-base bg-4" />
 			</section>
 
 			<section id="about" className="hero is-fullheight has-text-centered bg-4">
-				<Waves className="bg-base" />
-
 				<div className="hero-body">
 					<div className="container">
 						<h2 className="title has-text-centered has-text-weight-bold has-text-white mono is-size-3 lined">
@@ -266,6 +216,7 @@ export default function MainPage() {
 						</div>
 					</div>
 				</div>
+				<Waves className="bg-3 fill-4" />
 			</section>
 
 			{/* skills section */}
@@ -273,6 +224,7 @@ export default function MainPage() {
 				id="skills"
 				className="hero is-fullheight has-text-centered bg-3"
 			>
+
 				<div className="hero-body">
 					<div className="container">
 						<h2 className="title has-text-centered has-text-weight-bold has-text-white mono is-size-3 lined">
@@ -310,10 +262,12 @@ export default function MainPage() {
 						</div>
 					</div>
 				</div>
+				<Waves className="fill-3 bg-base" />
 			</section>
 
 			{/* contact section */}
-			<section id="contact" className="hero last has-text-centered bg-base">
+			<section id="contact" className="hero pt-0 last has-text-centered bg-base">
+
 				<div className="hero-body">
 					<div className="container">
 						<h2 className="title has-text-centered has-text-weight-bold has-text-white mono is-size-3 lined">
