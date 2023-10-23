@@ -51,7 +51,7 @@ $(() => {
 });
 
 const durationEasing = 50,
-	sections = ['', '#about', '#skills', '#contact'];
+	sections = ['', '#about', '#skills', '#projects', '#contact'];
 $(document).on('keydown', (e) => {
 	const index = sections.indexOf(window.location.hash);
 	let hash = '';
@@ -65,6 +65,17 @@ $(document).on('keydown', (e) => {
 		e.preventDefault();
 		if (index > 0) hash = sections[index - 1];
 	}
+	window.location.hash = hash;
+	$('html, body').animate(
+		{
+			scrollTop: $(hash).offset().top - $('nav').height()
+		},
+		durationEasing
+	);
+});
+$('.jq-scroll').on('click', (e) => {
+	e.preventDefault();
+	const hash = e.target.hash;
 	window.location.hash = hash;
 	$('html, body').animate(
 		{
