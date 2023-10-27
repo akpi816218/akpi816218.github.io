@@ -1,5 +1,10 @@
-import ScriptLoader from '@/components/ScriptLoader';
+import RootLayout from '@/app/layout';
+import Nav from '@/components/Nav';
+import { createRoot } from 'react-dom/client';
 
-export default function RedirectDiscordOSF() {
-	return <ScriptLoader redirectURL="https://discord.gg/DCznYuU4Ms" />;
-}
+createRoot(document.getElementById('root')!).render(
+	<RootLayout>
+		<Nav />
+		<h1>hi mom</h1>
+	</RootLayout>
+);

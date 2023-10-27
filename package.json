@@ -3,36 +3,34 @@
 		"@fortawesome/free-brands-svg-icons": "^6.4.2",
 		"@fortawesome/free-solid-svg-icons": "^6.4.2",
 		"@fortawesome/react-fontawesome": "^0.2.0",
-		"aos": "^2.3.4",
-		"bulma": "^0.9.4",
-		"eslint": "^8.52.0",
-		"eslint-config-next": "^13.5.6",
-		"jquery": "^3.7.1",
-		"next": "^13.5.6",
+		"@nextui-org/navbar": "^2.0.22",
+		"@nextui-org/react": "^2.1.13",
+		"@nextui-org/theme": "^2.1.9",
+		"@vitejs/plugin-react": "^4.1.0",
+		"framer-motion": "^10.16.4",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},
 	"private": true,
 	"scripts": {
-		"build": "next build",
-		"bundle": "ncu -u aos bulma jquery && npm i && cat ./node_modules/jquery/dist/jquery.min.js ./node_modules/aos/dist/aos.js ./src/app/main.js > ./public/assets/js/dist-bundle.min.js",
-		"dev": "next dev",
-		"format": "prettier -w .",
-		"lint": "next lint",
-		"start": "serve out",
-		"update": "ncu -u && npm i"
+		"build": "npm urn up && npm urn fmt && npm urn tw && tsc && npm urn lint && vite build",
+		"dev": "vite dev",
+		"fmt": "prettier -w .",
+		"lint": "vite lint",
+		"tw": "tailwind -mi src/app/input.css -o src/app/out.css",
+		"tw:watch": "npm urn tw -- -w",
+		"up": "ncu -u && npm i"
 	},
 	"type": "module",
 	"devDependencies": {
-		"@types/jquery": "^3.5.24",
-		"@types/node": "^20.8.7",
-		"@types/react": "^18.2.31",
+		"@types/node": "^20.8.9",
+		"@types/react": "^18.2.33",
 		"@types/react-dom": "^18.2.14",
+		"eslint": "^8.52.0",
 		"npm-check-updates": "^16.14.6",
 		"prettier": "^3.0.3",
-		"serve": "^14.2.1",
-		"tailwindcss": "^3.3.3",
+		"tailwindcss": "^3.3.5",
 		"typescript": "^5.2.2",
-		"uglify-js": "^3.17.4"
+		"vite": "^4.5.0"
 	}
 }

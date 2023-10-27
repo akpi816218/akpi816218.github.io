@@ -1,8 +1,4 @@
-*.min.*
-*@*
-*jquery*
-.next
-out
 *keybase*
 LICENSE
 CNAME
+node_modules

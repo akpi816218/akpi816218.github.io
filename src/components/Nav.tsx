@@ -1,73 +1,40 @@
-import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import {
+	Navbar,
+	NavbarBrand,
+	NavbarContent,
+	NavbarItem
+} from '@nextui-org/navbar';
 
-export default function Nav() {
+export default function Nav({ active }: { active?: 'skills' }) {
 	return (
-		<nav
-			className="navbar is-fixed-top pl-2 pr-3"
-			role="navigation"
-			aria-label="main navigation"
-		>
-			<div className="navbar-brand mt-2 mb-2">
-				<Link className="navbar-item ml-3 has-text-weight-bold" href="/#">
+		<Navbar className="text-white">
+			<NavbarBrand>
+				<a href="/" className="m-2">
 					akpi
-				</Link>
-
-				<Link
-					href=""
-					role="button"
-					className="navbar-burger has-text-white"
-					data-target="navMenu"
-					aria-label="menu"
-					aria-expanded="false"
-				>
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
-				</Link>
-			</div>
-
-			<div id="navbarBasicExample" className="navbar-menu">
-				<div className="navbar-start">
-					<Link href="/#about" className="jq-scroll navbar-item is-tab">
-						About
-					</Link>
-					<Link href="/#skills" className="jq-scroll navbar-item is-tab">
-						Skills
-					</Link>
-					<Link href="/#projects" className="jq-scroll navbar-item is-tab">
-						Projects
-					</Link>
-					<Link href="/#contact" className="jq-scroll navbar-item is-tab">
-						Contact
-					</Link>
-				</div>
-
-				<div className="navbar-end">
-					<Link
-						href="/ext/osf"
-						className="navbar-item is-tab"
-						target="_blank"
-						prefetch={true}
-					>
+				</a>
+			</NavbarBrand>
+			<NavbarContent justify="center">
+				<NavbarItem isActive={active === 'skills'}>
+					<a href="/skills">Skills</a>
+				</NavbarItem>
+			</NavbarContent>
+			<NavbarContent className="hidden sm:flex gap-4" justify="end">
+				<NavbarItem>
+					<a href="https://github.com/akpi816218">
 						{/* @ts-expect-error */}
-						<FontAwesomeIcon icon={faDiscord} size="xl" />
-					</Link>
-
-					<Link
-						href="https://github.com/akpi816218"
-						className="navbar-item is-tab"
-						target="_blank"
-						prefetch={true}
-					>
+						<FontAwesomeIcon icon={faGithub} size="lg" />
+					</a>
+				</NavbarItem>
+				<NavbarItem>
+					<a href="/ext/osf">
 						{/* @ts-expect-error */}
-						<FontAwesomeIcon icon={faGithub} size="xl" />
-					</Link>
-				</div>
-			</div>
-		</nav>
+						<FontAwesomeIcon icon={faDiscord} size="lg" />
+					</a>
+				</NavbarItem>
+			</NavbarContent>
+		</Navbar>
 	);
 }
