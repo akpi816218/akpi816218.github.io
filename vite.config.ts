@@ -16,8 +16,9 @@ export default defineConfig({
 	build: {
 		rollupOptions: {
 			input: {
-				main: resolve(join(__dirname, 'src/index.html')),
-				404: resolve(join(__dirname, 'src/404.html'))
+				main: resolve(join(__dirname, 'src', 'index.html')),
+				404: resolve(join(__dirname, 'src', '404', 'index.html')),
+				card: resolve(join(__dirname, 'src', 'card', 'index.html'))
 			}
 		}
 	},

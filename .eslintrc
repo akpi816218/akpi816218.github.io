@@ -1,3 +1,7 @@
 {
-	"extends": "next/core-web-vitals"
+	"ignorePatterns": ["*.min.*", "node_modules/**/*", "*out*"],
+	"plugins": ["react-refresh"],
+	"rules": {
+		"react-refresh/only-export-components": "warn"
+	}
 }

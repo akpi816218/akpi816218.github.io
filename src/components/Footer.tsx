@@ -5,10 +5,6 @@ export default function Footer() {
 	return (
 		<footer className="bg-base text-center text-white px-4 py-8">
 			<div className="mb-2">
-				<a href="/ext/osf" className="mx-2 is-blurple" target="_blank">
-					{/* @ts-expect-error */}
-					<FontAwesomeIcon icon={faDiscord} size="xl" />
-				</a>
 				<a
 					href="https://github.com/akpi816218"
 					className="text-white mx-2"
@@ -16,6 +12,10 @@ export default function Footer() {
 				>
 					{/* @ts-expect-error */}
 					<FontAwesomeIcon icon={faGithub} size="xl" />
+				</a>
+				<a href="/ext/osf/" className="mx-2" target="_blank">
+					{/* @ts-expect-error */}
+					<FontAwesomeIcon icon={faDiscord} size="xl" />
 				</a>
 			</div>
 

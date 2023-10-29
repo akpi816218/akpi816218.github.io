@@ -3,6 +3,12 @@
 # dependencies
 node_modules
 
+# tailwind
+*out*
+
+# vite
+dist
+
 # testing
 /coverage
 

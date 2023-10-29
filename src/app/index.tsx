@@ -12,5 +12,6 @@ createRoot(document.getElementById('root')!).render(
 				-year-old developer in the United States.
 			</p>
 		</main>
+		<section className="p-8 bg-base h-screen text-center text-white"></section>
 	</RootLayout>
 );

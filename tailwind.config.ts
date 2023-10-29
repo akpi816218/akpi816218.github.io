@@ -7,6 +7,11 @@ export const config: Config = {
 		'node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
 	],
 	darkMode: 'class',
+	theme: {
+		extend: {
+			backgroundImage: { logo: "url('/assets/img/akpi_logo.svg')" }
+		}
+	},
 	plugins: [nextui()]
 };
 
