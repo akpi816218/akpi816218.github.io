@@ -1,3 +1,4 @@
+import JobOfferModal from '@/components/JobOfferModal';
 import RootLayout from '@/components/Layout';
 import {
 	Button,
@@ -10,14 +11,12 @@ import {
 	Divider,
 	Image,
 	Input,
-	InputProps,
 	Link,
 	Modal,
 	ModalBody,
 	ModalContent,
 	ModalFooter,
 	ModalHeader,
-	TextAreaProps,
 	Textarea,
 	useDisclosure
 } from '@nextui-org/react';
@@ -49,7 +48,13 @@ function MyCard() {
 	return (
 		<RootLayout noFooter={true}>
 			<main className="flex flex-col justify-center items-center h-screen p-32 text-6xl bg-gradient-to-tl from-pink-500 to-cyan-500">
-				<Card className="p-8" isBlurred isFooterBlurred shadow="lg" isHoverable>
+				<Card
+					className="p-8 rounded-3xl"
+					isBlurred
+					isFooterBlurred
+					shadow="lg"
+					isHoverable
+				>
 					<CardHeader className="flex gap-3">
 						<Image
 							alt="akpi logo"
@@ -59,7 +64,7 @@ function MyCard() {
 							width={40}
 						/>
 						<div className="flex flex-col">
-							<p className="text-md">Akhil Pillai</p>
+							<p className="text-3xl">Akhil Pillai</p>
 							<a className="text-small text-slate-300" href="/">
 								akpi.is-a.dev
 							</a>
@@ -68,24 +73,42 @@ function MyCard() {
 					<Divider />
 					<CardBody className="text-3xl">
 						<p>
-							Hi, I'm akpi, a high school developer in the United States. I'm
-							currently the sole developer of{' '}
-							<a href="https://discog.localplayer.dev/">DisCog</a>. I spend my
-							free time programming in TypeScript and occasionally creating
-							websites like this one with React and Vite. I'm currently learning
-							how to design and send emails with React.
+							Hi, I'm a young developer located in the United States. I have
+							experience with TypeScript and JavaScript, especially with
+							building web apps like this with React and Vite. I can design and
+							build prettified emails with React as well. I can design and build
+							customized Discord bots as well.
 							<br />
-							I'm looking for small freelancing projects, cash only.
+							I'm looking for small freelancing projects, cash or check only for
+							now. If you have a job for me, please{' '}
+							{generated ? (
+								<>
+									email me at{' '}
+									<Link
+										href="mailto:jobs@akpi.is-a.dev"
+										className="text-2xl"
+										color="success"
+										underline="always"
+										isExternal
+									>
+										jobs@akpi.is-a.dev
+									</Link>
+								</>
+							) : (
+								'launch the form below'
+							)}{' '}
+							to let me know.
 							{generated || (
 								<>
 									<br />
-									<Button
+									{/* <Button
 										className="text-lg mt-4"
 										color="warning"
 										onPress={onOpen}
 									>
 										I've got a job for you!
-									</Button>
+									</Button> */}
+									<JobOfferModal className="text-lg mt-4" color="warning" />
 								</>
 							)}
 						</p>
@@ -137,7 +160,14 @@ function MyCard() {
 					)}
 				</Card>
 
-				<Modal size="5xl" isOpen={isOpen} onOpenChange={onOpenChange}>
+				<Modal
+					size="5xl"
+					isOpen={isOpen}
+					onOpenChange={onOpenChange}
+					shadow="lg"
+					backdrop="blur"
+					isDismissable
+				>
 					<ModalContent>
 						{onClose => (
 							<>
@@ -145,42 +175,40 @@ function MyCard() {
 									Job Offer
 								</ModalHeader>
 								<ModalBody>
-									<div className="flex flex-row justify-stretch gap-4">
-										<Input
-											value={nameVal}
-											isInvalid={!nameIsValid}
-											errorMessage={nameIsValid || 'Name is required'}
-											onValueChange={setNameVal}
-											id="i-name"
-											placeholder="Full Name"
-											className="text-xl"
-											variant="underlined"
-											isRequired
-											autoFocus
-										/>
-										<Input
-											value={emailVal}
-											isInvalid={!emailIsValid}
-											errorMessage={emailIsValid || 'Email is invalid'}
-											onValueChange={setEmailVal}
-											id="i-email"
-											placeholder="Email"
-											className="text-xl"
-											variant="underlined"
-											isRequired
-										/>
-										<Input
-											value={descVal}
-											isInvalid={!descIsValid}
-											errorMessage={descIsValid || 'Description is required'}
-											onValueChange={setDescVal}
-											id="i-desc"
-											placeholder="Short description"
-											className="text-xl"
-											variant="underlined"
-											isRequired
-										/>
-									</div>
+									<Input
+										value={nameVal}
+										isInvalid={!nameIsValid}
+										errorMessage={nameIsValid || 'Name is required'}
+										onValueChange={setNameVal}
+										id="i-name"
+										placeholder="Full Name"
+										className="text-xl"
+										variant="underlined"
+										isRequired
+										autoFocus
+									/>
+									<Input
+										value={emailVal}
+										isInvalid={!emailIsValid}
+										errorMessage={emailIsValid || 'Email is invalid'}
+										onValueChange={setEmailVal}
+										id="i-email"
+										placeholder="Email"
+										className="text-xl"
+										variant="underlined"
+										isRequired
+									/>
+									<Input
+										value={descVal}
+										isInvalid={!descIsValid}
+										errorMessage={descIsValid || 'Description is required'}
+										onValueChange={setDescVal}
+										id="i-desc"
+										placeholder="Short description"
+										className="text-xl"
+										variant="underlined"
+										isRequired
+									/>
 									<Divider />
 									<Textarea
 										value={longDescVal}

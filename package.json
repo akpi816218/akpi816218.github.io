@@ -20,7 +20,7 @@
 		"fmt": "prettier -w .",
 		"gen-card": "tsx scripts/generateCardImage.ts",
 		"lint": "eslint",
-		"tw": "tailwind -mi src/app/input.css -o src/app/out.css",
+		"tw": "tailwind -mi src/styles/input.css -o src/styles/out.css",
 		"tw:watch": "npm urn tw -- -w",
 		"up": "ncu -u && npm i"
 	},

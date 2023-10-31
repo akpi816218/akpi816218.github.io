@@ -1,26 +1,22 @@
-import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-export default function Footer() {
+export default function Footer({ className = '' }) {
 	return (
-		<footer className="bg-base text-center text-white px-4 py-8">
-			<div className="mb-2">
-				<a
+		<footer
+			className={
+				'bg-base text-center text-lg text-white px-4 py-16 ' + className
+			}
+		>
+			{/* <div className="mb-2">
+				<Link
 					href="https://github.com/akpi816218"
 					className="text-white mx-2"
 					target="_blank"
 				>
-					{/* @ts-expect-error */}
 					<FontAwesomeIcon icon={faGithub} size="xl" />
-				</a>
-				<a href="/ext/osf/" className="mx-2" target="_blank">
-					{/* @ts-expect-error */}
-					<FontAwesomeIcon icon={faDiscord} size="xl" />
-				</a>
-			</div>
+				</Link>
+			</div> */}
 
 			<p>
-				<span className="font-bold">akpi816218</span>
+				Website designed and built entirely by Akhil Pillai.
 				<br />
 				&copy; {new Date().getFullYear()} Copyright{' '}
 				<a

@@ -1,5 +1,5 @@
 import Footer from '@/components/Footer';
-import '@/app/out.css';
+import '@/styles/out.css';
 import { Providers } from '@/components/Providers';
 import { ReactNode, StrictMode } from 'react';
 

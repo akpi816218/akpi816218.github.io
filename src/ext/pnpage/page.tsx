@@ -1,4 +1,4 @@
-import RedirectPage from '@/app/Redirect';
+import RedirectPage from '@/components/Redirect';
 import { createRoot } from 'react-dom/client';
 
 createRoot(document.getElementById('root')!).render(
