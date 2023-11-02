@@ -19,6 +19,10 @@
 	font-family: 'Poppins', sans-serif;
 }
 
+.border-c2 {
+	border-color: var(--c2);
+}
+
 .bg-base {
 	background-color: var(--bg);
 }

@@ -8,15 +8,21 @@ import {
 	NavbarItem
 } from '@nextui-org/navbar';
 
-export default function Nav({ active }: { active?: 'skills' }) {
+export default function Nav({ active }: { active?: 'card' }) {
 	return (
 		<Navbar className="text-white bg-cyan-800">
-			<NavbarBrand>
-				<a href="/" className="h-12 w-12 bg-logo rounded-xl" />
+			<NavbarBrand className="text-white font-black text-xl">
+				<a href="/" className="flex flex-row items-center py-4">
+					<img
+						src="/assets/img/akpi_logo.svg"
+						className="h-max aspect-square rounded-xl mr-4"
+					/>
+					akpi
+				</a>
 			</NavbarBrand>
 			<NavbarContent justify="center">
-				<NavbarItem isActive={active === 'skills'}>
-					<a href="/skills">Skills</a>
+				<NavbarItem isActive={active === 'card'}>
+					<a href="/card/">Card</a>
 				</NavbarItem>
 			</NavbarContent>
 			<NavbarContent justify="end">

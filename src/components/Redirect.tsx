@@ -29,27 +29,24 @@ export default function RedirectPage({ url }: { url: string | URL }) {
 						You are going to: <Code>{url.toString()}</Code>
 					</p>
 					<motion.div
-						className="p-1 rounded-2xl bg-clip-border bg-none"
+						className="p-1 rounded-2xl bg-clip-border"
 						whileHover={{
 							scale: 1.125,
 							transition: {
 								duration: 0.25,
 								repeatType: 'reverse'
 							},
-							// background radial gradient (cyan, lime, magenta), clip to border
 							backgroundImage:
 								'radial-gradient(circle at 50% 50%, #0ff, #0f0, #f0f)'
+						}}
+						initial={{
+							backgroundImage:
+								'radial-gradient(circle at 50% 50%, #f0f, #0ff, #0f0)'
 						}}
 					>
 						<Button
 							id="redirect-button"
 							onPress={() => window.location.assign(url)}
-							onMouseOver={e =>
-								((e.target as HTMLButtonElement).innerText = 'Get roasted')
-							}
-							onMouseOut={e =>
-								((e.target as HTMLButtonElement).innerText = 'Get redirected')
-							}
 							color="secondary"
 							variant="shadow"
 							radius="lg"

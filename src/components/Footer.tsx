@@ -2,7 +2,8 @@ export default function Footer({ className = '' }) {
 	return (
 		<footer
 			className={
-				'bg-base text-center text-lg text-white px-4 py-16 ' + className
+				'bg-base text-center text-lg text-white px-4 pt-16 pb-12 border-t-small border-c2 ' +
+				className
 			}
 		>
 			{/* <div className="mb-2">
