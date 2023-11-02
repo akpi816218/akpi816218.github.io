@@ -15,7 +15,7 @@
 	},
 	"private": true,
 	"scripts": {
-		"build": "npm urn up && npm urn fmt && npm urn tw && tsc && npm urn lint && vite build",
+		"build": "npm urn up && npm urn fmt && npm urn tw && tsc && npm urn lint && npm urn gen-card && vite build",
 		"dev": "vite dev",
 		"fmt": "prettier -w .",
 		"gen-card": "tsx scripts/generateCardImage.ts",
@@ -35,6 +35,7 @@
 		"npm-check-updates": "^16.14.6",
 		"prettier": "^3.0.3",
 		"tailwindcss": "^3.3.5",
+		"tsx": "^3.14.0",
 		"typescript": "^5.2.2",
 		"vite": "^4.5.0"
 	}
