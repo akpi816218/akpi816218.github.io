@@ -1,46 +1,33 @@
-import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Image from 'next/image';
-import Link from 'next/link';
-
-export default function Footer() {
+export default function Footer({ className = '' }) {
 	return (
-		<footer className="bg-base content has-text-centered has-text-white mb-0">
-			<div className="mb-2">
-				<Link href="/ext/osf" className="mr-2 blurple" target="_blank">
-					{/* @ts-expect-error */}
-					<FontAwesomeIcon icon={faDiscord} size="xl" />
-				</Link>
+		<footer
+			className={
+				'bg-base text-center text-lg text-white px-4 pt-16 pb-12 border-t-small border-c2 ' +
+				className
+			}
+		>
+			{/* <div className="mb-2">
 				<Link
 					href="https://github.com/akpi816218"
-					className="has-text-white ml-2"
+					className="text-white mx-2"
 					target="_blank"
 				>
-					{/* @ts-expect-error */}
 					<FontAwesomeIcon icon={faGithub} size="xl" />
 				</Link>
-			</div>
+			</div> */}
 
 			<p>
-				<span className="has-text-weight-bold">akpi816218</span>
+				Website designed and built entirely by Akhil Pillai.
 				<br />
-				&copy; <span id="cp-year">2023</span> Copyright{' '}
-				<Link href="https://akpi.is-a.dev">akpi816218</Link>. All Rights
-				Reserved.
+				&copy; {new Date().getFullYear()} Copyright{' '}
+				<a
+					href="https://akpi.is-a.dev"
+					className="underline underline-offset-2"
+				>
+					Akhil Pillai
+				</a>
+				. All Rights Reserved.
 			</p>
-			<Link
-				href="https://bulma.io"
-				className="has-text-centered has-image-centered no-flip"
-			>
-				<Image
-					src="/assets/img/made-with-bulma--dark.png"
-					// className="h2m"
-					alt="Made with Bulma"
-					className="is-inline"
-					width={256}
-					height={48}
-				/>
-			</Link>
 		</footer>
 	);
 }

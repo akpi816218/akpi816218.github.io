@@ -3,15 +3,14 @@
 # dependencies
 node_modules
 
+# tailwind
+*out*
+
+# vite
+dist
+
 # testing
 /coverage
-
-# next.js
-.next
-out
-
-# production
-/build
 
 # misc
 .DS_Store
