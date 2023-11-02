@@ -20,7 +20,8 @@ export default defineConfig({
 				404: resolve(join(__dirname, 'src', '404', 'index.html')),
 				card: resolve(join(__dirname, 'src', 'card', 'index.html'))
 			}
-		}
+		},
+		outDir: 'dist'
 	},
 	resolve: {
 		alias: {
